@@ -9,8 +9,8 @@ module bcd_2digit(dec1s, dec10s, binaryNum);
         bits[10:7] - 1s place digit 
         bits[6:0] - original 7-bit binary number to be converted
     */
-    reg[3:0] binary10s;
-    reg[3:0] binary1s;
+    wire[3:0] binary10s;
+    wire[3:0] binary1s;
 
     always @(binaryNum) begin
         b = 15'b0; // clear at first 

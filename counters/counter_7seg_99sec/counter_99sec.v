@@ -5,7 +5,7 @@ module counter_99sec(q, q2, clkIn, rst);
     output[6:0] q; // 7-bit digit output
     output q2; // led indicator
 
-    clk_div #(.ticksAtHalfSec(4)) divider(
+    clk_div divider( // change parameter ticksAtHalfSec to smaller number to verify design on testbench
         .clkOut(clk),
         .clkOut2(q2),
         .clkIn(clkIn)
